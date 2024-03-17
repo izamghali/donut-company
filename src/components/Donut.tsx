@@ -45,7 +45,7 @@ export function Donut({ className, donutScale } : Donut) {
             </Canvas>
 
             <div id="donut-shadow" className={`blur-[16px] select-none -translate-y-16 md:-translate-y-0 std-duration`}>
-                <Image className="w-72" src={shadow} alt=""  />
+                <Image priority className="w-72" src={shadow} alt=""  />
             </div>
 
         </div>
