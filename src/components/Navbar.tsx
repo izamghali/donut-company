@@ -74,7 +74,7 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
                     </div>
 
                     <div className="dropdown dropdown-end md:hidden flex">
-                        <div tabIndex={0} role="button" className="select-none">
+                        <div tabIndex={0} role="button" className="select-none" aria-labelledby="burger-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         </div>
                         <div tabIndex={0} className="mt-10 border-2 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
