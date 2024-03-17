@@ -1,14 +1,39 @@
-"use client"
+'use client'
 import React from "react"
 import Link from "next/link"
 import { useState, useEffect } from "react";
 
 export default function Navbar({ className } : Readonly<{ className: string }>) {
-    const [ theme, setTheme ] : any = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+    // const [ theme, setTheme ] = useState<null | string>(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+    const initialTheme = () => {
+        if (typeof window !== 'undefined' && window.localStorage) {
+            // console.log('INITAL THEME: window exists');
+            
+            if (localStorage.getItem('theme')) {
+                // console.log('INITAL THEME: theres theme');
+                return localStorage.getItem('theme')  
+            } else {
+                // console.log('INITAL THEME: theme is not yet set');
+                return 'light' 
+            }
+        } else {
+            console.log('INITAL THEME: window DOESNT exist');
+        }
+    }
 
+    const [ theme, setTheme ] = useState<null | string | undefined>(initialTheme)
+    
     useEffect(() => {
-        localStorage.setItem('theme', theme);
-        const localTheme : any = localStorage.getItem('theme');
+
+        let currentTheme : string
+        if (theme) {
+            currentTheme = theme;
+            localStorage.setItem('theme' , theme);
+        } else {
+            localStorage.setItem('theme' , 'light');
+        }
+        const localTheme : null | string = localStorage.getItem('theme');
+
         const html = document.querySelector('html')
         const donutShadow = document.getElementById('donut-shadow');
         if (localTheme === 'dark') {
@@ -18,7 +43,7 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
             html?.classList.toggle('dark')
             donutShadow?.classList.toggle('opacity-0')
         }
-        html?.setAttribute('data-theme', localTheme)
+
     }, [theme])
 
     function handleTheme(event: any) {

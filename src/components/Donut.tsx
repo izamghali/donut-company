@@ -32,7 +32,6 @@ function MeshComponent({ donutScale } : { donutScale: Vector3 }) {
 }
   
 export function Donut({ className, donutScale } : Donut) {
-    
 
     return (
         <div className={`flex flex-col items-center ${className}`}>
@@ -40,7 +39,7 @@ export function Donut({ className, donutScale } : Donut) {
                 {/* <OrbitControls /> */}
                 <ambientLight  />
                 {/* <directionalLight position={ localStorage.getItem('theme') === 'dark' ? [0, -8, 10] : [0, -8, 10] } /> */}
-                <directionalLight position={ localStorage.getItem('theme') === 'dark' ? [0, -8, 10] : [0, 5, 1] } />
+                <directionalLight position={[0, -8, 10] } />
                 <pointLight position={[1, 2, 1]} scale={[10, 10, 10]} />
                 <MeshComponent donutScale={donutScale} />
             </Canvas>

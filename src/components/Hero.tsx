@@ -5,12 +5,23 @@ import { Vector3 } from "three";
 
 export default function Hero() {
 
-    let sm = window.matchMedia("(min-width: 480px)").matches;
-    // let md = window.matchMedia("(min-width: 768px)").matches;
-    // let lg = window.matchMedia("(min-width: 976px)").matches;
-    // let xl = window.matchMedia("(min-width: 1280px)").matches;
-    // let xxl = window.matchMedia("(min-width: 1536px)").matches;
+    const initialScale = () : any => {
+        let small  = [ 10, 10, 10 ]
+        let big  = [ 14, 14, 14 ]
+        if (typeof window !== 'undefined' && window.localStorage) {
+            let md = window.matchMedia("(min-width: 768px)").matches;
+            let lg = window.matchMedia("(min-width: 976px)").matches;
+            let xl = window.matchMedia("(min-width: 1280px)").matches;
+            let xxl = window.matchMedia("(min-width: 1536px)").matches;
+            let sm = window.matchMedia("(min-width: 480px)").matches;
 
+            if (sm) {
+                return  big
+            } else {
+                return  small
+            }
+        }
+    }
 
     return ( // NOTE:  add CTA btn to order
         <section className="bg-accent dark:bg-dark h-screen relative flex items-center">
@@ -21,7 +32,9 @@ export default function Hero() {
                     right-0 lg:right-[1rem] xl:right-[10rem]
                     lg:std-duration
                 `}
-                donutScale={ sm ? [ 14, 14, 14 ] : [ 10, 10, 10 ]}
+                donutScale={initialScale()}
+                // donutScale={ [ 12, 12, 12 ]}
+                // donutScale={ sm ? [ 14, 14, 14 ] : [ 10, 10, 10 ]}
             />
             <div className=" 
                 w-full lg:w-fit 
