@@ -16,11 +16,10 @@ export default function Drawer({ className } : Props) {
 
                     <h3 className="text-center font-bold text-xl mb-10 mt-20">Our Menu</h3>
 
-                    <div>
-                        <li><a>Donuts</a></li>
-                        <li><a>Cookies & Brownies</a></li>
-                        <li><a>Beverage</a></li>
-
+                    <div className="flex flex-col">
+                        <a className="border-2 p-2">Donuts</a>
+                        <a className="border-2 p-2">Cookies & Brownies</a>
+                        <a className="border-2 p-2">Beverage</a>
                     </div>
 
                 

@@ -7,6 +7,10 @@ export default function Home() {
   return (
     <section className="">
       <Hero />
+
+      <div>
+        <h2>Testimonials</h2>
+      </div>
       
     </section>
   );
