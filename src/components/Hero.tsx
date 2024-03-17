@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React, { useState } from "react"
 import { Donut } from "./Donut"
 import { Vector3 } from "three";
@@ -6,10 +6,10 @@ import { Vector3 } from "three";
 export default function Hero() {
 
     let sm = window.matchMedia("(min-width: 480px)").matches;
-    let md = window.matchMedia("(min-width: 768px)").matches;
-    let lg = window.matchMedia("(min-width: 976px)").matches;
-    let xl = window.matchMedia("(min-width: 1280px)").matches;
-    let xxl = window.matchMedia("(min-width: 1536px)").matches;
+    // let md = window.matchMedia("(min-width: 768px)").matches;
+    // let lg = window.matchMedia("(min-width: 976px)").matches;
+    // let xl = window.matchMedia("(min-width: 1280px)").matches;
+    // let xxl = window.matchMedia("(min-width: 1536px)").matches;
 
 
     return ( // NOTE:  add CTA btn to order
