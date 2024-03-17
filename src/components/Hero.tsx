@@ -2,6 +2,7 @@
 import React, { useState } from "react"
 import { Donut } from "./Donut"
 import { Vector3 } from "three";
+import Link from "next/link";
 
 export default function Hero() {
 
@@ -9,10 +10,6 @@ export default function Hero() {
         let small  = [ 10, 10, 10 ]
         let big  = [ 14, 14, 14 ]
         if (typeof window !== 'undefined' && window.localStorage) {
-            let md = window.matchMedia("(min-width: 768px)").matches;
-            let lg = window.matchMedia("(min-width: 976px)").matches;
-            let xl = window.matchMedia("(min-width: 1280px)").matches;
-            let xxl = window.matchMedia("(min-width: 1536px)").matches;
             let sm = window.matchMedia("(min-width: 480px)").matches;
 
             if (sm) {
@@ -41,7 +38,7 @@ export default function Hero() {
                 lg:absolute 
                 left-4 lg:left-10
                 bottom-[20rem] lg:bottom-[30rem] 
-                translate-y-40 md:translate-y-36 lg:translate-y-[8rem]
+                translate-y-52 md:translate-y-36 lg:translate-y-[8rem]
                 std-duration
                 text-white text-center lg:text-start
             ">
@@ -59,12 +56,22 @@ export default function Hero() {
                 {/* <p className="text-2xl lg:text-5xl font-extralight mt-2">Sit | Eat | Repeat</p> */}
                 <p className="
                     text-xl md:text-2xl lg:text-4xl 
-                    font-extralight mt-2 text-slate-200
+                    font-extralight mt-2 text-slate-100
                 ">Sweets that make you&nbsp;
                     go nuts!
                     {/* <span className="bg-[#CC95AF]">
                     </span> */}
                 </p>
+
+                <div className="mt-6">
+                    <Link href={'/menu'} className="btn group px-10 bg-white border-2 border-white text-dark duration-200 hover:border-white hover:text-white">
+                        Order Now
+                        <svg className="bi bi-arrow-right group-hover:translate-x-2 duration-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                        </svg>
+                    </Link>
+
+                </div>
 
 
             </div>
