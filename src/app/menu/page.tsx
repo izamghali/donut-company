@@ -1,11 +1,8 @@
 import Drawer from "@/components/Drawer"
 import React from "react"
 
-interface Props {
-    className: string
-}
 
-export default function Page({ className } : Props) {
+export default function Page() {
     return (
         <div>
             <Drawer className="drawer-open" />
