@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <section className="">
-      <Hero />
+      {/* <Hero /> */}
 
       <div>
         <h2>Testimonials</h2>

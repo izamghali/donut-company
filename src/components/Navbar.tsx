@@ -73,11 +73,11 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
                         <Link aria-label="Navigating to Team Page" href={`/team`}>Team</Link>
                     </div>
 
-                    <div className="dropdown dropdown-end md:hidden flex">
+                    <div className="dropdown dropdown-end md:hidden flex ">
                         <div tabIndex={0} role="button" className="select-none" aria-labelledby="burger-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         </div>
-                        <div tabIndex={0} className="mt-10 border-2 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <div tabIndex={0} className="mt-10  dropdown-content z-[1] menu p-2 shadow rounded-box w-52 text-black bg-slate-50 dark:bg-dark dark:text-light dark:border-2">
                             <Link className="p-2" aria-label="Navigating to Menu Page" href={`/menu`}>Menu</Link>
                             <Link className="p-2" aria-label="Navigating to About Page" href={`/about`}>About</Link>
                             <Link className="p-2" aria-label="Navigating to Team Page" href={`/team`}>Team</Link>
