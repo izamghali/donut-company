@@ -11,6 +11,10 @@
   .std-duration {
     @apply duration-200;
   }
+
+  .std-padding {
+    @apply lg:px-10 px-2;
+  }
 }
 
 @layer base {

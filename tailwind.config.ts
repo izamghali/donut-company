@@ -24,7 +24,8 @@ const config: Config = {
       colors: {
         'dark': '#141924',
         'accent': '#88AAEE',
-        'light': '#F8FAFC'
+        'light': '#F8FAFC',
+        'std-yellow': '#ffcf69'
       },
     },
   },

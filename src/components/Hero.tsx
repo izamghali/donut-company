@@ -41,7 +41,8 @@ export default function Hero() {
                 translate-y-52 md:translate-y-36 lg:translate-y-[8rem]
                 std-duration
                 text-white text-center lg:text-start
-            ">
+                ">
+                <p className="mb-6 hidden lg:block font-light tracking-wider dark:text-std-yellow text-dark">Gyms are cool, but have you tried</p>
                 <h1 className="
                     font-bold 
                     text-5xl md:text-6xl lg:text-8xl
@@ -58,16 +59,14 @@ export default function Hero() {
                     text-xl md:text-2xl lg:text-4xl 
                     font-extralight mt-2 text-slate-100
                 ">Sweets that make you&nbsp;
-                    go nuts!
-                    {/* <span className="bg-[#CC95AF]">
-                    </span> */}
+                    go nuts!?
                 </p>
 
                 <div className="mt-6">
                     <Link href={'/menu'} className="btn group px-10 bg-white border-2 border-white text-dark duration-200 hover:border-white hover:text-white">
                         Order Now
                         <svg className="bi bi-arrow-right group-hover:translate-x-2 duration-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                            <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                         </svg>
                     </Link>
 

@@ -70,7 +70,7 @@ export function Donut({ className, donutScale } : Donut) {
 
 
             <div className="
-                absolute bg-[#ffcf69]
+                absolute bg-std-yellow
                 translate-y-40 sm:translate-y-24 md:translate-y-[8rem]
                 w-[20rem] h-[20rem]
                 sm:w-[25rem] sm:h-[25rem]
