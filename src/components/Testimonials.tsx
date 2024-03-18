@@ -62,7 +62,7 @@ export default function Testimonials() {
                   return <div className="relative" key={idx}>
                   
                     {/* card */}
-                    <div className="card min-h-[19rem] w-80 bg-base-100 shadow-xl z-50">
+                    <div className="card min-h-[19rem] w-80 bg-base-100 shadow-xl">
 
                       <div className="card-body">
                         <div className="relative">

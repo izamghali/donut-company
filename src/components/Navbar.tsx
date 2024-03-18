@@ -55,7 +55,7 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
     }
 
     return (
-        <div className={`navbar bg-accent dark:bg-dark std-padding flex justify-between text-white fill-white ${className} `}>
+        <div className={`navbar z-50 bg-accent dark:bg-dark std-padding flex justify-between text-white fill-white ${className} `}>
 
             {/* brand */}
             <div className="">
