@@ -11,10 +11,9 @@ import Image from "next/image";
 
 interface Donut {
     className: string
-    donutScale: Vector3
 }
 
-function MeshComponent({ donutScale } : { donutScale: Vector3 }) {
+function MeshComponent() {
     const fileUrl = "/donut/scene.gltf";
     const mesh = useRef<Mesh>(null!);
     const gltf = useLoader(GLTFLoader, fileUrl);
@@ -25,12 +24,9 @@ function MeshComponent({ donutScale } : { donutScale: Vector3 }) {
     let sm = window.matchMedia("(min-width: 480px)").matches;
     
     useFrame(() => {
-
-        // mesh.current.rotation.y += Math.sin(-0.01)
         mesh.current.rotation.z += Math.tan(0.001)
         mesh.current.rotation.x += Math.tan(0.001)
       
-
         if (sm) {
             mesh.current.scale.x = 12
             mesh.current.scale.y = 12
@@ -44,7 +40,6 @@ function MeshComponent({ donutScale } : { donutScale: Vector3 }) {
             mesh.current.scale.y = 10
             mesh.current.scale.z = 10
         }
-        
       
     });
   
@@ -55,7 +50,7 @@ function MeshComponent({ donutScale } : { donutScale: Vector3 }) {
     );
 }
   
-export function Donut({ className, donutScale } : Donut) {
+export function Donut({ className } : Donut) {
 
     return (
         <div className={`flex flex-col items-center ${className}`}>
@@ -65,7 +60,7 @@ export function Donut({ className, donutScale } : Donut) {
                 {/* <directionalLight position={ localStorage.getItem('theme') === 'dark' ? [0, -8, 10] : [0, -8, 10] } /> */}
                 <directionalLight position={[0, -8, 10] } />
                 <pointLight position={[1, 2, 1]} scale={[10, 10, 10]} />
-                <MeshComponent donutScale={donutScale} />
+                <MeshComponent />
             </Canvas>
 
 

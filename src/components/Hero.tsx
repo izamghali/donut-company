@@ -3,36 +3,39 @@ import React, { useState } from "react"
 import { Donut } from "./Donut"
 import { Vector3 } from "three";
 import Link from "next/link";
+import Promo from "./Promo";
 
 export default function Hero() {
 
-    const initialScale = () : any => {
-        let small  = [ 10, 10, 10 ]
-        let big  = [ 14, 14, 14 ]
-        if (typeof window !== 'undefined' && window.localStorage) {
-            let sm = window.matchMedia("(min-width: 480px)").matches;
+    // const initialScale = () : any => {
+    //     let small  = [ 10, 10, 10 ]
+    //     let big  = [ 14, 14, 14 ]
+    //     if (typeof window !== 'undefined' && window.localStorage) {
+    //         let sm = window.matchMedia("(min-width: 480px)").matches;
 
-            if (sm) {
-                return  big
-            } else {
-                return  small
-            }
-        }
-    }
+    //         if (sm) {
+    //             return  big
+    //         } else {
+    //             return  small
+    //         }
+    //     }
+    // }
+
+    let src = 'https://firebasestorage.googleapis.com/v0/b/image-gallery-3010c.appspot.com/o/donut-loop.webm?alt=media&token=86cdc3a7-0e04-4c08-b9fe-55c634c8ae77'
 
     return ( // NOTE:  add CTA btn to order
         <section className="bg-accent dark:bg-dark h-screen relative flex items-center">
-            <Donut 
+            {/* <Donut 
                 className={`
                     h-full absolute 
                     w-screen lg:w-[30rem]
                     right-0 lg:right-[1rem] xl:right-[10rem]
                     lg:std-duration
                 `}
-                donutScale={initialScale()}
-                // donutScale={ [ 12, 12, 12 ]}
-                // donutScale={ sm ? [ 14, 14, 14 ] : [ 10, 10, 10 ]}
-            />
+            /> */}
+
+            <Promo />
+
             <div className=" 
                 w-full lg:w-fit 
                 lg:absolute 

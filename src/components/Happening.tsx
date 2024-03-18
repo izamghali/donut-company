@@ -18,7 +18,7 @@ export default function Happening() {
     let multiplier = 20
 
     return (
-        <section className="
+        <section className="bg-white
             flex justify-between 
             overflow-x-scroll overflow-y-hidden relative
         ">
