@@ -68,12 +68,18 @@ export default function Drawer({ className, menuData } : Props) {
                     {/* content */}
                 </div>
 
-                <div className="snap-y snap-mandatory lg:snap-none flex flex-wrap xl:gap-8 gap-4 justify-center lg:justify-start p-4 md:p-10 overflow-y-scroll">
+                <div className="
+                    
+                    h-[45rem] overflow-scroll snap-mandatory
+                    snap-y lg:snap-none md:h-screen lg:h-full
+                    flex flex-wrap xl:gap-8 gap-4 
+                    justify-center lg:justify-start 
+                    p-4 md:p-10
+                ">
                     {
-                        // menuCards()
                         menuData.map((item, idx) => {
                             return <div className="snap-center
-                                card group relative 
+                                card group relative  
                                 w-96 md:w-full lg:w-96
                                 min-w-[18rem] lg:max-w-[20rem] max-w-auto
                                 bg-base-100 shadow-xl overflow-hidden 
