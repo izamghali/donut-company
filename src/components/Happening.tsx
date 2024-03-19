@@ -23,6 +23,7 @@ export default function Happening() {
             overflow-x-scroll overflow-y-hidden relative
         ">
             
+            {/* heading */}
             <div className="z-20 w-full sticky top-10 left-10">
                 <h2 className="font-bold text-5xl absolute bg-white text-dark">Fun</h2>
                 <h2 className="font-bold text-5xl absolute bg-white text-dark translate-y-14">Festivities</h2>
@@ -33,7 +34,8 @@ export default function Happening() {
                 <button className="btn translate-y-[10rem] translate-x-[8rem] md:translate-x-[20rem] px-10 bg-std-yellow border-none hover:bg-std-yellow hover:translate-y-[9.5rem]">Join</button>
             </div>
 
-            <div className="flex select-none">
+            {/* text bg */}
+            <div className="flex select-none text-slate-500">
                 <div className={`absolute top-0 left-0 flex flex-col w-full`}>
                     {
                         nums.map((num, idx) => {

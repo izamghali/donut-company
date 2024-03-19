@@ -53,7 +53,7 @@ export default function Testimonials() {
     return (
         <section className="pt-24 pb-8">
         
-            <h2 className="text-center">Satisfied Customers</h2>
+            <h2 className="text-center">What they say about our products</h2>
 
             <div className="flex gap-10 justify-center flex-wrap ">
                 
