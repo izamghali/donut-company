@@ -11,9 +11,8 @@ import fest5 from '../../public/festivities/fest-5.avif'
 const silkscreen = Silkscreen({subsets: ["latin"], weight: '400' })
 
 export default function Happening() {
-
+    
     let carousels = [ fest1, fest2, fest3, fest4, fest5]
-
     let nums = Array.from(Array(20).keys())
 
     return (
@@ -29,12 +28,12 @@ export default function Happening() {
             </div>
 
             <div className="z-20 sticky top-[15rem] left-10 sm:left-[12rem] md:left-[15rem] lg:left-[20rem] h-fit std-duration">
-                <span className="font-medium text-3xl absolute text-dark w-60">Tired of eating?</span>
+                <span className="font-medium text-3xl absolute text-dark w-60 bg-red-400">Tired of eating?</span>
                 <button className="btn translate-y-[10rem] translate-x-[8rem] md:translate-x-[20rem] px-10 bg-std-yellow border-none hover:bg-std-yellow hover:translate-y-[9.5rem]">Join</button>
             </div>
 
             {/* text bg */}
-            <div className="flex select-none text-slate-500">
+            <div className="flex select-none text-slate-500" role="article" aria-labelledby="menu item">
                 <div className={`absolute top-0 left-0 flex flex-col w-full`}>
                     {
                         nums.map((num, idx) => {
@@ -83,20 +82,21 @@ export default function Happening() {
             </div>
 
             {/* carousels */}
-            <div className="top-0 -left-36 translate-x-[50rem] flex space-x-[-13rem] z-10 ">
+            <div id="carousel" className="top-0 -left-36 translate-x-[50rem] flex space-x-[-13rem] z-10 ">
                     
                     { carousels.map((item : StaticImageData, idx: number) => {
-                        return <div className={`w-[40rem] overflow-hidden hover:blur-0 duration-700 
+                        return <div className={` w-[40rem] overflow-hidden
                                 ${ idx !== carousels.length - 1 ? 'rotate-[82deg] z-10' : '' }
-                                ${ idx % 2 === 0 ? 'blur-[0.5px]': '' } 
-                                ${ idx === carousels.length - 2 ? 'z-20' : '' }`} key={idx}>
+                                
+                                `} key={idx}>
                             <Image
-                                className={
-                                    `w-full h-full hover:scale-105 duration-300 scale-[102%]
-                                    ${ idx !== carousels.length - 1 ? '-rotate-[82deg]' : '' } `} 
+                                className={`
+                                    h-full duration-300 
+                                    ${ idx !== carousels.length - 1 ? '-rotate-[82deg]' : '' } 
+                                    ${ idx === 3 ? 'translate-y-10 -translate-x-1 scale-105 hover:scale-110' : 'hover:scale-105' } 
+                                    `} 
                                 src={item} 
                                 alt="" 
-                                key={idx} 
                             />
                         </div>
                     })}
