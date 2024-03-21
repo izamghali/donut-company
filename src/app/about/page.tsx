@@ -1,18 +1,38 @@
+'use client'
 import Logo from "@/components/Logo"
+import { usePathname } from "next/navigation"
 import React from "react"
+import Timeline from "@/components/Timeline"
 
 export default function Page() {
+
+    const pathName = usePathname()
+
+    let texts = [
+        {
+            title: 'Story',
+            heading: 'Nitty Gritty',
+            text: <p>JS Do-Nuts stands for more than just delicious treats; it's about crafting moments of joy. We believe in the power of simple pleasures to bring people together and brighten their day. Our mission is to create irresistible donuts that ignite smiles and foster connections, making every bite a moment to savor. At JS Do-Nuts, we're not just selling donuts – we're spreading happiness, one delectable treat at a time.</p>
+        },
+        {
+            title: 'Products',
+            heading: "Halal Certified",
+            text: <p>JS Do-Nuts is certified Halal Grade A by MUI with number LPPOM-00160233461223. We uphold high standards in the manufacture and presentation of products using 100% Halal ingredients.</p>
+        },
+
+    ]
+
     return (
         // NOTE:  pt-16 is Navbar length
-        <section className="pt-16">
+        <section className={`pt-16 `}>
 
             {/* about banner */}
-            <div className="relative lg:flex lg:bg-gradient-to-r lg:from-white border-red-400">
+            <div className={`relative lg:flex lg:bg-gradient-to-r lg:from-white lg:h-screen ${ pathName === '/about' ? 'border-t-2' : '' } dark:border-t-0 `} >
                 {/* banner img */}
-                <div className="w-full lg:w-[40rem] xl:w-[50rem] relative std-duration">
+                <div className="w-full lg:w-[50rem] xl:w-[70rem] relative std-duration">
                     <div className="lg:bg-gradient-to-l lg:from-white from-10%
                         absolute top-0 left-0 w-full h-full"></div>
-                    <img className="h-full" src="https://images.unsplash.com/photo-1422919869950-5fdedb27cde8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <img className="h-full object-cover" src="https://images.unsplash.com/photo-1422919869950-5fdedb27cde8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                 </div>
 
                 {/* banner body */}
@@ -31,11 +51,11 @@ export default function Page() {
                             />
                         </span>
                         <h2 className="
-                            font-bold std-duration text-3xl sm:text-5xl lg:text-7xl 
+                            std-heading-h2
                             max-lg:w-fit w-fit max-lg:bg-std-yellow dark:bg-std-yellow
                         ">
                         Our Story</h2>
-                        <span className="std-duration max-lg:bg-light text-sm md:text-lg lg:pr-4">
+                        <span className="std-duration max-lg:bg-light text-sm md:text-lg lg:pr-4 text-slate-700">
                             Get to know the people behind the wheels 
                             <span className="sm:inline hidden">&nbsp;and see under the hood!</span>
                         </span>
@@ -47,9 +67,28 @@ export default function Page() {
             </div>
 
             {/* about content */}
-            <div>
+            <div className="flex justify-center flex-col items-center gap-8 py-12 lg:h-screen lg:py-0">
                 
+                {
+                    texts.map((item, idx) => {
+                        return <div key={idx} className="px-4 md:px-8 xl:px-0 py-0 lg:py-16
+                            flex max-lg:flex-col lg:gap-4 gap-8 justify-between w-full xl:w-[70rem] std-duration
+                        ">
+                            <div className="flex flex-col lg:gap-4">
+                                <p className="text-xl font-light">&mdash; Our {item.title}</p>
+                                <h3 className="font-bold text-3xl lg:text-7xl" >{item.heading}</h3>
+                            </div>
+                            <span className=" lg:max-w-[30rem] text-slate-700">{item.text}</span>
+                        </div>
+                    })
+                }
+
             </div>
+
+            {/* milestone */}
+            {/* <div className="border-2 py-12">
+                <Timeline className="" />
+            </div> */}
 
         </section>
     )

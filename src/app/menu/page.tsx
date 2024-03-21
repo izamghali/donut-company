@@ -34,7 +34,7 @@ export default function Page() {
             badges: ['Favourite'],
             src: "https://images.pexels.com/photos/7034527/pexels-photo-7034527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         },
-        
+
         {
             title: "Honey Dew",
             desc: "",
@@ -42,7 +42,6 @@ export default function Page() {
             badges: ['Hottest'],
             src: "https://images.unsplash.com/photo-1609873539821-3b46e00a0313?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
-
         {
             title: "Strawberry Cereal",
             desc: "",
@@ -50,7 +49,6 @@ export default function Page() {
             badges: ['Fresh'],
             src: "https://images.pexels.com/photos/4774231/pexels-photo-4774231.jpeg"
         },
-        
         
     ]
 
