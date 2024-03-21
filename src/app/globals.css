@@ -15,6 +15,10 @@
   .std-padding {
     @apply lg:px-10 px-2;
   }
+
+  .std-heading-h2 {
+    @apply font-bold std-duration text-3xl sm:text-5xl lg:text-7xl ;
+  }
 }
 
 @layer base {
