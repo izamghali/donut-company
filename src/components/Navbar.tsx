@@ -17,21 +17,28 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
     }
 
     const [ theme, setTheme ] = useState<null | string | undefined>(initialTheme)
-    
-    var prevScrollpos = window.scrollY;
+    const [ prevScrollpos, setPrevScrollpos ] = useState(0)
+    const [ navbar, setNavbar ] = useState<null | HTMLElement>() 
+
+    useEffect(() => {
+        setPrevScrollpos(window.scrollY)
+        setNavbar(document.getElementById("navbar"))
+    }, [])
     
     useEffect(() => {
-
+        
         window.onscroll = function() {
             var currentScrollPos = window.scrollY;
-            const navbar = document.getElementById("navbar")
-    
+
+            const navbar : HTMLElement | null = document.getElementById("navbar")
+            if (navbar === null) { return }
+            
             if (prevScrollpos > currentScrollPos) {
                 navbar.style.top = "0";
             } else {
                 navbar.style.top = "-64px";
             }
-            prevScrollpos = currentScrollPos;
+            setPrevScrollpos(currentScrollPos);
         }
                     
         let currentTheme : string
