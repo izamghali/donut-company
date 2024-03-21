@@ -1,13 +1,13 @@
 
 import React from "react"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 interface Menu {
     title: string,
     desc: string,
     price: number,
     badges: string[],
-    src: string
+    src: StaticImageData
 }
 
 interface Props {
@@ -16,29 +16,6 @@ interface Props {
 }
 
 export default function Drawer({ className, menuData } : Props) {
-
-    const menuCards = () => {
-        return menuData.map((item, idx) => {
-            return <div key={idx} className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h3 className="card-title">
-                        {item.title}
-                        {
-                            item.badges.map((badge, idx) => {
-                                return <div key={idx} className="badge badge-secondary">{badge}</div>
-                            })
-                        }
-                    </h3>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-between items-center">
-                        <button className="font-semibold text-lg tracking-wider">${item.price}</button>
-                        <button className="btn btn-primary px-8">Order</button>
-                    </div>
-                </div>
-            </div>
-        })
-    }
 
     const cardPadding = '2rem'
 
@@ -87,7 +64,7 @@ export default function Drawer({ className, menuData } : Props) {
                                 bg-base-100 shadow-xl overflow-hidden 
                                 text-dark std-duration " 
                                 key={idx} >
-                                <img className="h-full cursor-zoom-in  group-hover:scale-105 std-duration" src={item.src} alt="" />
+                                <Image className="h-full cursor-zoom-in  group-hover:scale-105 std-duration" src={item.src} alt="" />
 
                                 {/* title */}
                                 <div className={`absolute top-[1.5rem] left-[1.5rem] right-[1.5rem]`}>

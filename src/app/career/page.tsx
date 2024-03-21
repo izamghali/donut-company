@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image";
 
 export default function Page() {
 
@@ -25,14 +26,18 @@ export default function Page() {
                     group hover:p-0 hover:border-0
                     std-duration
                 ">
-                    <img 
+                    <Image
                         className="rounded-[12rem] 
                             border-[1rem] border-std-yellow p-4
                             group-hover:p-0 group-hover:border-0
                             std-duration
+                            w-10
+                            h-10
                         " 
                         src={src} 
-                        alt="" 
+                        alt="Image of a baker girl" 
+                        fill={true}
+                        priority={true}
                     />
                 </div>
 

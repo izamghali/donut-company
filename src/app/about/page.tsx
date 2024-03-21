@@ -3,6 +3,8 @@ import Logo from "@/components/Logo"
 import { usePathname } from "next/navigation"
 import React from "react"
 import Timeline from "@/components/Timeline"
+import Image from "next/image"
+import aboutImg from '../../../public/donut-store.avif'
 
 export default function Page() {
 
@@ -12,7 +14,7 @@ export default function Page() {
         {
             title: 'Story',
             heading: 'Nitty Gritty',
-            text: <p>JS Do-Nuts stands for more than just delicious treats; it's about crafting moments of joy. We believe in the power of simple pleasures to bring people together and brighten their day. Our mission is to create irresistible donuts that ignite smiles and foster connections, making every bite a moment to savor. At JS Do-Nuts, we're not just selling donuts – we're spreading happiness, one delectable treat at a time.</p>
+            text: <p>JS Do-Nuts stands for more than just delicious treats; it&apos;s about crafting moments of joy. We believe in the power of simple pleasures to bring people together and brighten their day. Our mission is to create irresistible donuts that ignite smiles and foster connections, making every bite a moment to savor. At JS Do-Nuts, we&apos;re not just selling donuts &mdash; we&apos;re spreading happiness, one delectable treat at a time.</p>
         },
         {
             title: 'Products',
@@ -32,7 +34,7 @@ export default function Page() {
                 <div className="w-full lg:w-[50rem] xl:w-[70rem] relative std-duration">
                     <div className="lg:bg-gradient-to-l lg:from-white from-10%
                         absolute top-0 left-0 w-full h-full"></div>
-                    <img className="h-full object-cover" src="https://images.unsplash.com/photo-1422919869950-5fdedb27cde8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                    <Image className="h-full object-cover" src={aboutImg} alt="" />
                 </div>
 
                 {/* banner body */}

@@ -4,13 +4,11 @@ import { Donut } from "./Donut"
 import { Vector3 } from "three";
 import Link from "next/link";
 import Logo from "./Logo";
+import Image from "next/image";
+import HeroHorizontal from '../../public/hero/hero-horizontal.jpg'
+import HeroVertical from '../../public/hero/hero-vertical.jpg'
 
 export default function Hero() {
-
-    let src3 = 'https://images.pexels.com/photos/6193747/pexels-photo-6193747.jpeg'
-    let src2 = 'https://images.unsplash.com/photo-1647489615365-45c8d0264f66?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-
-    let srcVer = 'https://images.pexels.com/photos/4686961/pexels-photo-4686961.jpeg'
     
 
     return ( // NOTE:  add CTA btn to order
@@ -28,8 +26,8 @@ export default function Hero() {
             /> */}
 
             <div className="h-screen md:h-auto">
-                <img className="hidden md:block w-screen lg:h-screen object-cover" src={src3} alt="" />
-                <img className="block md:hidden object-cover sm:w-full w-auto min-h-screen sm:h-auto" src={srcVer} alt="" />
+                <Image priority className="hidden md:block w-screen lg:h-screen object-cover" src={HeroHorizontal} alt="" />
+                <Image priority className="block md:hidden object-cover sm:w-full w-auto min-h-screen sm:h-auto" src={HeroVertical} alt="" />
             </div>
 
             {/* NOTE:  hero content className when 3D
