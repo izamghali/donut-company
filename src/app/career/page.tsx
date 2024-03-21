@@ -1,9 +1,8 @@
 import React from "react"
 import Image from "next/image";
+import careerImg from '../../../public/career.jpg'
 
 export default function Page() {
-
-    let src = 'https://images.pexels.com/photos/6958009/pexels-photo-6958009.jpeg';
 
     return (
         <section className="pt-16">
@@ -31,13 +30,10 @@ export default function Page() {
                             border-[1rem] border-std-yellow p-4
                             group-hover:p-0 group-hover:border-0
                             std-duration
-                            w-10
-                            h-10
                         " 
-                        src={src} 
+                        src={careerImg} 
                         alt="Image of a baker girl" 
-                        fill={true}
-                        priority={true}
+                        priority
                     />
                 </div>
 

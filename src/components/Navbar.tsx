@@ -24,6 +24,25 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
         setPrevScrollpos(window.scrollY)
         setNavbar(document.getElementById("navbar"))
     }, [])
+
+    useEffect(() => {
+        let currentTheme : string
+        if (theme) {
+            currentTheme = theme;
+            localStorage.setItem('theme' , theme);
+        } else {
+            localStorage.setItem('theme' , 'light');
+        }
+        const localTheme : null | string = localStorage.getItem('theme');
+
+        const html = document.querySelector('html')
+        if (localTheme === 'dark') {
+            html?.classList.add('dark')
+        } else {
+            html?.classList.toggle('dark')
+        }
+        
+    }, [theme])
     
     useEffect(() => {
         
@@ -40,27 +59,8 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
             }
             setPrevScrollpos(currentScrollPos);
         }
-                    
-        let currentTheme : string
-        if (theme) {
-            currentTheme = theme;
-            localStorage.setItem('theme' , theme);
-        } else {
-            localStorage.setItem('theme' , 'light');
-        }
-        const localTheme : null | string = localStorage.getItem('theme');
 
-        const html = document.querySelector('html')
-        const donutShadow = document.getElementById('donut-shadow');
-        if (localTheme === 'dark') {
-            html?.classList.add('dark')
-            donutShadow?.classList.add('opacity-0')
-        } else {
-            html?.classList.toggle('dark')
-            donutShadow?.classList.toggle('opacity-0')
-        }
-
-    }, [theme, prevScrollpos])
+    }, [prevScrollpos])
 
     function handleTheme(event: any) {
         if (event.target.checked) {

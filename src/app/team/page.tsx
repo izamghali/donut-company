@@ -35,7 +35,7 @@ export default async function Page() {
                                 <div className="badge text-light badge-outline ">@ Expert</div>
                             </div>
                             <div>
-                                <Image className="absolute top-0 left-0 w-full" src={item.img.src} alt="" />
+                                <Image priority className="absolute top-0 left-0 w-full" src={item.img.src} alt="" />
                             </div>
                             <div className="absolute top-2 left-2 bg-light group-hover:opacity-100 opacity-0 text-sm">
                                 <span>{item.email}</span>
