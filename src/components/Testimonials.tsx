@@ -24,7 +24,7 @@ export default function Testimonials() {
     ]
 
     return (
-        <section className="py-60">
+        <section className="lg:py-60 py-20 std-duration">
         
             <h2 className="text-center mb-20">What they say about our products</h2>
 

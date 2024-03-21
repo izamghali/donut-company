@@ -9,7 +9,7 @@ export default function Page() {
 
 
             {/* banner */}
-            <div className=" p-16 gap-6 flex flex-col-reverse lg:flex-row items-center justify-end">
+            <div className=" p-16 gap-6 flex flex-col-reverse lg:flex-row items-center justify-between">
 
                 {/* banner - content */}
                 <div className="flex flex-col gap-4 max-lg:text-center">
@@ -21,13 +21,13 @@ export default function Page() {
 
                 {/* banner - img */}
                 <div className="w-96 rounded-full cursor-pointer
-                    border-[1rem] border-emerald-400 p-4 
+                    border-[1rem] border-emerald-400 p-4
                     group hover:p-0 hover:border-0
                     std-duration
                 ">
                     <Image
                         className="rounded-[12rem] 
-                            border-[1rem] border-std-yellow p-4
+                            lg:border-[1rem] border-std-yellow lg:p-4
                             group-hover:p-0 group-hover:border-0
                             std-duration
                         " 
