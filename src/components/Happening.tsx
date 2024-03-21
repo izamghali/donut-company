@@ -15,7 +15,6 @@ export default function Happening() {
     ]
 
     let nums = Array.from(Array(20).keys())
-    let multiplier = 20
 
     return (
         <section className="bg-white
@@ -83,6 +82,7 @@ export default function Happening() {
                 </div>
             </div>
 
+            {/* carousels */}
             <div className="top-0 -left-36 translate-x-[50rem] flex space-x-[-13rem] z-10 ">
                     
                     { carousels.map((item, idx) => {
