@@ -49,7 +49,7 @@ export default function Home() {
                   <span className="bg-std-emerald">
                   At JS Do-Nuts, we believe in the power of donuts to bring people together and brighten their day
                   </span>
-                  , and we're committed to spreading happiness one delectable treat at a time.</span>
+                  , and we&apos;re committed to spreading happiness one delectable treat at a time.</span>
                 </p>
                 <Link className="btn" href={'/about'} >Our Story
                   <svg className="bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
