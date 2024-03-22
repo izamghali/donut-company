@@ -1,4 +1,3 @@
-// 'use client'
 import Drawer from "@/components/Drawer"
 import React from "react"
 import donut1 from '../../../public/menu/donut-1.jpg'
@@ -7,6 +6,11 @@ import donut3 from '../../../public/menu/donut-3.jpeg'
 import donut4 from '../../../public/menu/donut-4.webp'
 import donut5 from '../../../public/menu/donut-5.jpg'
 import donut6 from '../../../public/menu/donut-6.jpg'
+
+export const metadata = {
+    title: 'JS Do-Nuts | Menu',
+    description: "Sweetest Donuts in Town",
+}
 
 export default function Page() {
 

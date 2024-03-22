@@ -1,4 +1,3 @@
-'use client'
 import Logo from "@/components/Logo"
 import { usePathname } from "next/navigation"
 import React from "react"
@@ -6,9 +5,13 @@ import Timeline from "@/components/Timeline"
 import Image from "next/image"
 import aboutImg from '../../../public/donut-store.avif'
 
+export const metadata = {
+    title: 'JS Do-Nuts | About',
+    description: "Sweetest Donuts in Town",
+}
+
 export default function Page() {
 
-    const pathName = usePathname()
 
     let texts = [
         {
@@ -29,7 +32,7 @@ export default function Page() {
         <section className={`pt-16 `}>
 
             {/* about banner */}
-            <div className={`relative lg:flex lg:bg-gradient-to-r lg:from-white lg:h-screen ${ pathName === '/about' ? 'border-t-2' : '' } dark:border-t-0 `} >
+            <div className={`relative lg:flex lg:bg-gradient-to-r lg:from-white lg:h-screen dark:border-t-0 border-t-2`} >
                 {/* banner img */}
                 <div className="w-full lg:w-[50rem] xl:w-[70rem] relative std-duration">
                     <div className="lg:bg-gradient-to-l lg:from-white from-10%
@@ -74,13 +77,13 @@ export default function Page() {
                 {
                     texts.map((item, idx) => {
                         return <div key={idx} className="px-4 md:px-8 xl:px-0 py-0 lg:py-16
-                            flex max-lg:flex-col lg:gap-4 gap-8 justify-between w-full xl:w-[70rem] std-duration
+                            flex max-lg:flex-col lg:gap-4 gap-8 justify-between std-w std-duration
                         ">
                             <div className="flex flex-col lg:gap-4">
                                 <p className="text-xl font-light">&mdash; Our {item.title}</p>
                                 <h3 className="font-bold text-3xl lg:text-7xl" >{item.heading}</h3>
                             </div>
-                            <span className=" lg:max-w-[30rem] text-slate-700">{item.text}</span>
+                            <span className=" lg:max-w-[30rem] std-text-less">{item.text}</span>
                         </div>
                     })
                 }

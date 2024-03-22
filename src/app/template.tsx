@@ -4,7 +4,7 @@ import Footer from "@/components/Footer"
 
 export default function Template({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <div className="relative ">
+        <div className="relative">
             <Navbar className="fixed z-10"  />
             { children }
             <Footer />
