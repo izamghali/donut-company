@@ -6,10 +6,10 @@ import Image from "next/image";
 import HeroHorizontal from '../../public/hero/hero-horizontal.jpg'
 import HeroVertical from '../../public/hero/hero-vertical.jpg'
 
-export default function Hero() {
+export default function Hero({ className } : { className: string }) {
     
     return (
-        <section className="relative flex items-center">
+        <section className={`relative flex items-center h-screen md:h-auto overflow-hidden ${className} `}>
 
             <div className="h-screen md:h-auto">
                 <Image className="hidden md:block w-screen lg:h-screen object-cover" src={HeroHorizontal} alt="" />

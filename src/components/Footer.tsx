@@ -1,26 +1,27 @@
 import React from "react"
+import Link from "next/link"
 
 export default function Footer() {
     return (
-        <section className="border-t-2 dark:bg-dark dark:text-slate-100">
+        <section className="border-t-2 dark:border-darkLess dark:bg-dark dark:text-slate-100">
             <footer className="footer p-10 bg-base-200 text-base-content">
-                <nav>
-                    <p className="footer-title">Products</p> 
-                    <a className="link link-hover">Menu</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                <nav className="mb-4">
+                    <p className="footer-title">Services</p> 
+                    <Link href={'/menu'} className="link link-hover py-2">Menu</Link>
+                    <a className="link link-hover py-2">Marketing</a>
+                    <a className="link link-hover py-2">Advertisement</a>
                 </nav> 
-                <nav>
+                <nav className="mb-4">
                     <p className="footer-title">Company</p> 
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Career</a>
+                    <Link href={'/about'} className="link link-hover py-2">About us</Link>
+                    <a className="link link-hover py-2">Contact</a>
+                    <Link href={'/career'} className="link link-hover py-2">Career</Link>
                 </nav> 
-                <nav>
+                <nav className="mb-4">
                     <p className="footer-title">Legal</p> 
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <a className="link link-hover py-2">Terms of use</a>
+                    <a className="link link-hover py-2">Privacy policy</a>
+                    <a className="link link-hover py-2">Cookie policy</a>
                 </nav>
             </footer> 
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">

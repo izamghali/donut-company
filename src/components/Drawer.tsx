@@ -17,10 +17,8 @@ interface Props {
 
 export default function Drawer({ className, menuData } : Props) {
 
-    const cardPadding = '2rem'
-
     return (
-        <div className={` drawer ${className}`}>
+        <div className={`drawer dark:bg-dark dark:text-light  ${className}`}>
             <input id="product-drawer" type="checkbox" className="drawer-toggle" />
 
             {/* // NOTE:  mt-16 is the length of the Navbar */}
@@ -90,9 +88,9 @@ export default function Drawer({ className, menuData } : Props) {
                 </div>
             </div> 
             
-            <div className="drawer-side border-r-2 dark:border-r-0">
+            <div className="drawer-side border-r-2 dark:border-slate-400">
                 <label htmlFor="product-drawer" aria-label="open sidebar" className="drawer-overlay"></label>
-                <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content hidden md:block">
+                <ul className="menu p-4 w-80 min-h-full text-base-content hidden md:block">
                 {/* Sidebar content here */}
 
                     <h3 className="text-center font-bold text-xl mb-10 mt-20">Our Menu</h3>
