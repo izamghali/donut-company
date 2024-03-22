@@ -102,6 +102,7 @@ export default function Happening() {
                     })}
 
             </div>
+
         </section>
     )
 };

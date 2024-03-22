@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Testimonials() {
+export default function Testimonials({ className } : { className: string }) {
 
     let tests = [
         {
@@ -24,7 +24,7 @@ export default function Testimonials() {
     ]
 
     return (
-        <section className="lg:py-60 py-20 std-duration">
+        <section className={`py-20 std-duration lg:flex justify-center items-center flex-col lg:h-screen ${className} `}>
         
             <h2 className="text-center mb-20">What they say about our products</h2>
 
