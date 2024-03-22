@@ -18,7 +18,7 @@ export default function Home() {
     <section className="" id="app">
       <Hero className="snap-start snap-normal" />
 
-      <Overview className="" />
+      <Overview className="snap-center lg:snap-start snap-normal" />
 
       <div className="relative snap-center snap-normal">
         <Happening />

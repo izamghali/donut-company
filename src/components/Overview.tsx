@@ -1,22 +1,15 @@
 'use client'
-import React, { SetStateAction, useEffect, useState } from "react"
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-
 import missionImg from '../../public/mission.jpg'
 
 export default function Overview({ className } : { className: string }) {
 
-    const [ dots, setDots ] = useState<null | unknown[]>()
-
-    useEffect(() => {
-        let arr = Array.from({ length: 6032 }); // gap-7px
-        setDots(arr)
-
-    }, [])
+    let dots = Array.from({ length: 6032 }); // gap-7px
 
     return (
-        <div className={` ${ className } snap-center lg:snap-start snap-normal dark:bg-dark dark:text-light
+        <div className={` ${ className } dark:bg-dark dark:text-light
           py-12 xl:py-0 lg:px-10 px-10
           xl:h-screen std-duration 
           lg:flex lg:flex-col lg:justify-center items-center relative
@@ -58,7 +51,7 @@ export default function Overview({ className } : { className: string }) {
 
               <div className="flex gap-[7px] flex-wrap">
                 {
-                  dots?.map((item, idx) => {
+                  dots.map((item, idx) => {
                     return <div key={idx} className="w-1 h-1 rounded-full bg-slate-400"></div>
                   })
                 }
