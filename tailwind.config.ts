@@ -25,7 +25,10 @@ const config: Config = {
         'dark': '#141924',
         'accent': '#88AAEE',
         'light': '#F8FAFC',
-        'std-yellow': '#ffcf69'
+        'lightLess': '#374151',
+        'darkLess': '#9CA3AF',
+        'std-yellow': '#ffcf69',
+        'std-emerald': '#34D399',
       },
     },
   },

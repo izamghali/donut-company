@@ -4,9 +4,6 @@
 
 
 @layer components {
-  .hero-text {
-    
-  }
 
   .std-duration {
     @apply duration-200;
@@ -14,6 +11,10 @@
 
   .std-padding {
     @apply lg:px-10 px-2;
+  }
+
+  .std-w {
+    @apply w-full lg:w-[70rem];
   }
 
   .std-heading-h2 {
@@ -24,33 +25,3 @@
 @layer base {
 
 }
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
