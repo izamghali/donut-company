@@ -5,6 +5,8 @@ import profile1 from '../../../public/team/profile-1.jpg'
 import profile2 from '../../../public/team/profile-2.jpg'
 import profile3 from '../../../public/team/profile-3.jpg'
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import NavigateBtn from "@/components/NavigateBtn";
+import careerImg from '../../../public/career.jpg'
 
 export const metadata = {
     title: 'JS Do-Nuts | Team',
@@ -22,7 +24,44 @@ export default async function Page() {
 
     return (
         // pt-16 is Navbar length
-        <div className="py-16 dark:bg-dark">
+        <section className="py-16 dark:bg-dark">
+            
+            <div className=" dark:bg-dark h-screen">
+                {/* banner */}
+                <div className=" p-16 gap-6 flex flex-col-reverse lg:flex-row items-center justify-between">
+
+                    {/* banner - content */}
+                    <div className="flex flex-col gap-10 lg:gap-20 max-lg:text-center items-center lg:items-start">
+                        <div className="flex flex-col gap-4">
+                            <h2 className="
+                                std-heading-h2 dark:text-light
+                            ">Ready to make an impact?</h2>
+                            <p className="text-md lg:text-xl font-light dark:text-darkLess text-lightLess">Be a part of Indonesia&apos;s leading Donut Startup!</p>
+                        </div>
+                        <NavigateBtn className="w-fit" navigateTo="/about" buttonLabel="Join Us" />
+                    </div>
+
+                    {/* banner - img */}
+                    <div className="w-96 rounded-full cursor-pointer
+                        border-[1rem] border-std-emerald p-4
+                        group hover:p-0 hover:border-0
+                        std-duration
+                    ">
+                        <Image
+                            className="rounded-[12rem] 
+                                lg:border-[1rem] border-std-yellow lg:p-4
+                                group-hover:p-0 group-hover:border-0
+                                std-duration
+                            " 
+                            src={careerImg} 
+                            alt="Image of a baker girl" 
+                            priority
+                        />
+                    </div>
+
+                </div>
+            </div>
+
             <h2 className="text-center font-bold text-lg py-4 dark:text-light border-t-2 dark:border-darkLess">Teams</h2>
 
             <div className="flex max-lg:flex-col lg:gap-6 xl:gap-16 gap-4 justify-center items-center std-duration dark:bg-dark">
@@ -50,7 +89,7 @@ export default async function Page() {
 
             </div>
 
-        </div>
+        </section>
     )
 };
 
