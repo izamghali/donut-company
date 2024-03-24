@@ -12,7 +12,7 @@ const silkscreen = Silkscreen({subsets: ["latin"], weight: '400' })
 
 export default function Happening() {
     
-    let carousels = [ fest1, fest2, fest3, fest4, fest5]
+    let carousels = [ fest1, fest2, fest3, fest4, fest5 ]
     let nums = Array.from(Array(20).keys())
 
     return (
@@ -97,6 +97,8 @@ export default function Happening() {
                                     `} 
                                 src={item} 
                                 alt="" 
+                                width={2070}
+                                height={1380}
                             />
                         </div>
                     })}

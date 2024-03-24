@@ -24,7 +24,7 @@ export default function Overview({ className, src, heading, text } : { className
                 
               {/* image */}
               <div className="max-w-[40rem] w-full">
-                <Image src={src} alt="image of a dad & daughter looking at donuts"
+                <Image width={1920} height={1280} src={src} alt="image of a dad & daughter looking at donuts"
                   className="rounded-xl object-cover w-full"/>
               </div>
 
