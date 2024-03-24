@@ -1,9 +1,13 @@
+'use client'
 import React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Footer() {
+    const pathname = usePathname();
+
     return (
-        <section className="border-t-2 dark:border-darkLess dark:bg-dark dark:text-slate-100">
+        <section className={`border-t-2 ${ pathname === '/' ? 'snap-end' : '' } dark:border-darkLess dark:bg-dark dark:text-slate-100`}>
             <footer className="footer p-10 bg-base-200 text-base-content">
                 <nav className="mb-4">
                     <p className="footer-title">Services</p> 
