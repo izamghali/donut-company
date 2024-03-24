@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { Menu } from "@/types"
 
-export default function MenuCard({ className, item } : { className: string, item: Menu }) {
+export default function MenuCard({ className, item, idx } : { className: string, item: Menu, idx: number }) {
     return (
         <div className="snap-center
             card group relative  

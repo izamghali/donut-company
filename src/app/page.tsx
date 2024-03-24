@@ -86,9 +86,7 @@ export default function Home() {
     observer.observe(videoWrapper)
   }, [])
 
-  // let sources = 'https://firebasestorage.googleapis.com/v0/b/image-gallery-3010c.appspot.com/o/chocolate.webm?alt=media&token=b770d3cc-a13a-41d9-964f-4f847fde6858'
-  let sources = 'https://firebasestorage.googleapis.com/v0/b/image-gallery-3010c.appspot.com/o/chocolate-3.webm?alt=media&token=0efa4cd6-58d9-4f07-9500-88651118e664'
-  
+  let sources = 'https://firebasestorage.googleapis.com/v0/b/image-gallery-3010c.appspot.com/o/chocolate-3.webm?alt=media&token=0efa4cd6-58d9-4f07-9500-88651118e664'  
 
   return (
     <section className="" id="app">
