@@ -1,9 +1,10 @@
 import Logo from "@/components/Logo"
-import { usePathname } from "next/navigation"
 import React from "react"
 import Timeline from "@/components/Timeline"
+import cultureImg from '../../../public/culture.jpg'
 import Image from "next/image"
 import aboutImg from '../../../public/donut-store.avif'
+import Overview from "@/components/Overview"
 
 export const metadata = {
     title: 'JS Do-Nuts | About',
@@ -11,7 +12,6 @@ export const metadata = {
 }
 
 export default function Page() {
-
 
     let texts = [
         {
@@ -22,22 +22,32 @@ export default function Page() {
         {
             title: 'Products',
             heading: "Halal Certified",
-            text: <p>JS Do-Nuts is certified Halal Grade A by MUI with number LPPOM-00160233461223. We uphold high standards in the manufacture and presentation of products using 100% Halal ingredients.</p>
+            text: <p>JS Do-Nuts is certified Halal Grade A by MUI with number LPPOM-00170163461903. We uphold high standards in the manufacture and presentation of products using 100% Halal ingredients.</p>
         },
 
     ]
+
+    let cultureText = 
+        <p className=" text-lightLess dark:text-slate-300 md:text-xl text-justify">At JS Do-Nuts, our company culture is rooted in passion, creativity, and inclusivity.
+            <span className="bg-std-yellow dark:text-dark">&nbsp;We foster a collaborative environment where every team member is valued and empowered to contribute their unique ideas and talents.</span>
+            <span className="hidden sm:inline">&nbsp;Our work atmosphere thrives on a shared dedication to excellence, with a focus on creativity and innovation in every aspect of our business. We prioritize open communication, teamwork, and respect, creating a supportive and welcoming workplace where diversity is celebrated.
+                <span className="bg-std-emerald dark:text-dark">&nbsp;Working at JS Do-Nuts is an opportunity to be part of a dynamic team that&apos;s passionate about crafting delicious treats and spreading joy, offering a fulfilling and rewarding experience where every individual&apos;s contributions are valued and appreciated.</span>
+            </span>
+        </p>
+    
+    let test = "  "
 
     return (
         // NOTE:  pt-16 is Navbar length
         <section className={`pt-16 `}>
 
-            {/* about banner */}
+            {/* banner */}
             <div className={`relative lg:flex lg:bg-gradient-to-r lg:from-white lg:h-screen dark:border-t-0 border-t-2`} >
                 {/* banner img */}
                 <div className="w-full lg:w-[50rem] xl:w-[70rem] relative std-duration">
                     <div className="lg:bg-gradient-to-l lg:from-white from-10%
                         absolute top-0 left-0 w-full h-full"></div>
-                    <Image className="h-full object-cover" src={aboutImg} alt="" />
+                    <Image priority className="h-full object-cover" src={aboutImg} alt="" />
                 </div>
 
                 {/* banner body */}
@@ -71,12 +81,12 @@ export default function Page() {
 
             </div>
 
-            {/* about content */}
-            <div className="flex justify-center flex-col items-center gap-8 py-12 lg:h-screen lg:py-0">
+            {/* content */}
+            <div className="flex justify-center flex-col items-center gap-8 py-12 lg:h-screen lg:py-0 px-6">
                 
                 {
                     texts.map((item, idx) => {
-                        return <div key={idx} className="px-4 md:px-8 xl:px-0 py-0 lg:py-16
+                        return <div key={idx} className="px-4 xl:px-0 py-0 lg:py-16  lg:w-full xl:w-[80rem]
                             flex max-lg:flex-col lg:gap-4 gap-8 justify-between std-w std-duration
                         ">
                             <div className="flex flex-col lg:gap-4">
@@ -90,10 +100,13 @@ export default function Page() {
 
             </div>
 
+            <Overview className="" src={cultureImg} heading="What Truly Matters" text={cultureText} />
+
             {/* milestone */}
-            {/* <div className="border-2 py-12">
+            <div className="flex justify-center border-y-2 overflow-scroll lg:py-16 items-center">
                 <Timeline className="" />
-            </div> */}
+            </div>
+
 
         </section>
     )
