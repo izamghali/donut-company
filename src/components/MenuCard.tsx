@@ -6,7 +6,7 @@ export default function MenuCard({ className, item, idx } : { className: string,
     return (
         <div className="snap-center
             card group relative  
-            w-96 md:w-full lg:w-96
+            w-96 h-full md:w-full lg:w-96
             min-w-[18rem] lg:max-w-[20rem] max-w-auto
             bg-base-100 shadow-xl overflow-hidden 
             text-dark std-duration "  >

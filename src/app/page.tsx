@@ -28,7 +28,6 @@ export default function Home() {
     html?.classList.add('snap-y')
 
     const testimonials = document.querySelectorAll('.testimonials')
-    const testi: any = document.querySelector('#testimonial-section')
     const observer = new IntersectionObserver((entries) => {
       
       entries.forEach(entry => {
