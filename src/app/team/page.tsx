@@ -38,7 +38,7 @@ export default async function Page() {
                             ">Ready to make an impact?</h2>
                             <p className="text-md lg:text-xl font-light dark:text-darkLess text-lightLess">Be a part of Indonesia&apos;s leading Donut Startup!</p>
                         </div>
-                        <NavigateBtn className="w-fit" navigateTo="/about" buttonLabel="Join Us" />
+                        <NavigateBtn className="w-fit dark:text-light" navigateTo="/about" buttonLabel="Join Us" />
                     </div>
 
                     {/* banner - img */}
