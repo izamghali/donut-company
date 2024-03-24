@@ -28,14 +28,12 @@ export default async function Page() {
             
             <div className=" dark:bg-dark h-screen">
                 {/* banner */}
-                <div className=" p-16 gap-6 flex flex-col-reverse lg:flex-row items-center justify-between">
+                <div className=" p-16 gap-6 h-screen flex flex-col-reverse lg:flex-row items-center justify-between">
 
                     {/* banner - content */}
                     <div className="flex flex-col gap-10 lg:gap-20 max-lg:text-center items-center lg:items-start">
                         <div className="flex flex-col gap-4">
-                            <h2 className="
-                                std-heading-h2 dark:text-light
-                            ">Ready to make an impact?</h2>
+                            <h2 className="std-heading-h2 dark:text-light">Ready to make an impact?</h2>
                             <p className="text-md lg:text-xl font-light dark:text-darkLess text-lightLess">Be a part of Indonesia&apos;s leading Donut Startup!</p>
                         </div>
                         <NavigateBtn className="w-fit dark:text-light" navigateTo="/about" buttonLabel="Join Us" />
@@ -44,11 +42,11 @@ export default async function Page() {
                     {/* banner - img */}
                     <div className="w-96 rounded-full cursor-pointer
                         border-[1rem] border-std-emerald p-4
-                        group hover:p-0 hover:border-0
+                        group lg:hover:p-0 lg:hover:border-0
                         std-duration
                     ">
                         <Image
-                            className="rounded-[12rem] 
+                            className="rounded-[12rem] w-full
                                 lg:border-[1rem] border-std-yellow lg:p-4
                                 group-hover:p-0 group-hover:border-0
                                 std-duration
@@ -56,6 +54,8 @@ export default async function Page() {
                             src={careerImg} 
                             alt="Image of a baker girl" 
                             priority
+                            width={1920}
+                            height={2880}
                         />
                     </div>
 
