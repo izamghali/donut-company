@@ -21,6 +21,7 @@ export default function Home() {
   const videoRef: any = useRef(null)
   const sourceRef : any = useRef(null)
 
+  // testi & snap
   useEffect(() => {
     const html = document.querySelector('html') 
     html?.classList.add('snap-mandatory')
@@ -51,6 +52,7 @@ export default function Home() {
     
   }, [])
 
+  // video
   useEffect(() => {
     const videoWrapper : any = document.getElementById('videoWrapper')
     const navbar = document.getElementById('navbar')
@@ -94,6 +96,7 @@ export default function Home() {
 
       <Overview className="snap-center lg:snap-start snap-always" src={missionImg} heading="What We Thrive On" text={overviewText} />
 
+      {/* product overview */}
       <div className="snap-start snap-always std-duration bg-black dark:bg-dark xl:h-screen flex justify-center items-center flex-col">
         <div className="relative
           rounded-xl xl:w-[80rem]
@@ -129,6 +132,7 @@ export default function Home() {
         </p>
       </div> */}
 
+      {/* testimonials */}
       <div id="testimonial-section" className="snap-start h-screen flex p-16 flex-col dark:bg-dark">
         
         <h2 className="lg:hidden std-heading-h2 text-center mb-4">What They Say</h2>

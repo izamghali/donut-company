@@ -9,11 +9,11 @@ import HeroVertical from '../../public/hero/hero-vertical.jpg'
 export default function Hero({ className } : { className: string }) {
     
     return (
-        <section className={`relative flex items-center h-screen md:h-auto overflow-hidden ${className} `}>
+        <section className={`relative flex items-center overflow-hidden ${className} `}>
 
-            <div className="h-screen md:h-auto">
-                <Image priority width={1920} height={1080} className="hidden md:block w-screen lg:h-screen object-cover" src={HeroHorizontal} alt="" />
-                <Image priority width={1920} height={2880} className="block md:hidden object-cover sm:w-full w-auto min-h-screen sm:h-auto" src={HeroVertical} alt="" />
+            <div className="">
+                <Image priority width={1920} height={1080} className="hidden md:block lg:h-screen object-cover" src={HeroHorizontal} alt="" />
+                <Image priority width={1920} height={2880} className="block md:hidden object-cover sm:w-full min-h-screen" src={HeroVertical} alt="" />
             </div>
 
             <div className="
