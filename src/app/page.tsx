@@ -123,13 +123,13 @@ export default function Home() {
         </div>
       </div>     
 
-      {/* <div className="relative snap-center snap-always">
+      <div className="relative snap-center snap-always">
         <Happening />
         <p id="scroll-right" className="absolute -bottom-6 left-2 text-lightLess dark:text-lightLess">
           <span className="hidden lg:inline">scroll</span>
           <span className="inline lg:hidden">swipe</span>&nbsp;right
         </p>
-      </div> */}
+      </div>
 
       {/* testimonials */}
       <div id="testimonial-section" className="snap-start h-screen flex p-16 flex-col dark:bg-dark">
