@@ -29,7 +29,7 @@ export default function Happening() {
 
             <div className="z-20 sticky top-[15rem] left-10 sm:left-[12rem] md:left-[15rem] lg:left-[20rem] h-fit std-duration">
                 <span className="font-medium text-3xl absolute text-dark w-60 bg-red-400">Tired of eating?</span>
-                <button className="btn translate-y-[10rem] translate-x-[8rem] md:translate-x-[20rem] px-10 bg-std-yellow border-none hover:bg-std-yellow hover:translate-y-[9.5rem]">Join</button>
+                <button className="btn translate-y-[9rem] translate-x-[8rem] md:translate-x-[20rem] px-10 bg-std-yellow border-none hover:bg-std-yellow hover:translate-y-[9.5rem]">Join</button>
             </div>
 
             {/* text bg */}

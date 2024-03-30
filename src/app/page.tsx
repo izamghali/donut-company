@@ -113,7 +113,9 @@ export default function Home() {
             </div>
             
             <span id="loading-spinner" className={`loading max-lg:hidden loading-spinner loading-lg scale-[200%] bg-light absolute m-auto top-0 bottom-0 z-10`}></span>
-            <video preload="auto" ref={videoRef} width="1920" height="1080" className="xl:rounded-xl relative z-20" id="videoWrapper" muted loop >
+
+            <video preload="auto" ref={videoRef} width="1920" height="1080" 
+            className="xl:rounded-xl relative z-20" id="videoWrapper" muted loop >
                 <source ref={sourceRef} src={ sources } id="vidSource" type="video/webm" />
                 <track src="" kind="descriptions" />
                 <track src="" kind="captions" />
