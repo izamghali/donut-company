@@ -6,7 +6,7 @@ export default function MenuCard({ className, item, idx } : { className: string,
     return (
         <div className="snap-center
             card group relative  
-            w-96 h-full md:w-full lg:w-96
+            w-72 sm:w-80 h-full md:w-full lg:w-96
             min-w-[18rem] lg:max-w-[20rem] max-w-auto
             bg-base-100 shadow-xl overflow-hidden 
             text-dark std-duration "  >
@@ -14,7 +14,7 @@ export default function MenuCard({ className, item, idx } : { className: string,
 
             {/* title */}
             <div className={`absolute top-[1.5rem] left-[1.5rem] right-[1.5rem]`}>
-                <h3 className="card-title">
+                <h3 className="card-title cursor-zoom-in">
                     {item.title}
                     {
                         item.badges.map((badge, idx) => {
@@ -25,7 +25,7 @@ export default function MenuCard({ className, item, idx } : { className: string,
                 
             </div>
             <div className={`card-actions justify-between items-center absolute bottom-[1.5rem] left-[1.5rem] right-[1.5rem]`}>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p className="cursor-zoom-in">If a dog chews shoes whose shoes does he choose?</p>
                 <p className="font-semibold text-lg tracking-wider select-none">${item.price}</p>
                 <button className="btn btn-primary px-8 hover:bg-light hover:text-dark hover:border-light">Order</button>
             </div>
