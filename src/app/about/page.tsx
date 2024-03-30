@@ -39,10 +39,10 @@ export default function Page() {
 
     return (
         // NOTE:  pt-16 is Navbar length
-        <section className={`pt-16 `}>
+        <section className={`pt-16 snap-y snap-mandatory`}>
 
             {/* banner */}
-            <div className={`relative lg:flex lg:bg-gradient-to-r lg:from-white lg:h-screen dark:border-t-0 border-t-2`} >
+            <div className={`snap-start snap-always relative lg:flex lg:bg-gradient-to-r lg:from-white lg:h-screen dark:border-t-0 border-t-2`} >
                 {/* banner img */}
                 <div className="w-full lg:w-[50rem] xl:w-[70rem] relative std-duration">
                     <div className="lg:bg-gradient-to-l lg:from-white from-10%
@@ -82,7 +82,7 @@ export default function Page() {
             </div>
 
             {/* content */}
-            <div className="flex justify-center flex-col items-center gap-8 py-12 lg:h-screen lg:py-0 px-6">
+            <div className="snap-start snap-always flex justify-center flex-col items-center gap-8 py-12 lg:h-screen lg:py-0 px-6">
                 
                 {
                     texts.map((item, idx) => {
@@ -100,10 +100,10 @@ export default function Page() {
 
             </div>
 
-            <Overview className="" src={cultureImg} heading="What Truly Matters" text={cultureText} />
+            <Overview className="snap-start snap-always" src={cultureImg} heading="What Truly Matters" text={cultureText} />
 
             {/* milestone */}
-            <div className="flex justify-center border-y-2 overflow-scroll lg:py-16 items-center">
+            <div className="snap-center snap-always flex justify-center border-y-2 overflow-scroll lg:py-16 items-center">
                 <Timeline className="" />
             </div>
 

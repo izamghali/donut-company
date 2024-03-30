@@ -21,12 +21,8 @@ export default function Home() {
   const videoRef: any = useRef(null)
   const sourceRef : any = useRef(null)
 
-  // testi & snap
+  // testi
   useEffect(() => {
-    const html = document.querySelector('html') 
-    html?.classList.add('snap-mandatory')
-    html?.classList.add('snap-y')
-
     const testimonials = document.querySelectorAll('.testimonials')
     const observer = new IntersectionObserver((entries) => {
       
@@ -39,7 +35,6 @@ export default function Home() {
           entry.target.classList.add('translate-y-6')
         }
       })
-    
       
     }, {
       threshold: 0.8

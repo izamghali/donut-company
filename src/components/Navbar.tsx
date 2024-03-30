@@ -19,10 +19,15 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
 
     const [ theme, setTheme ] = useState<null | string | undefined>(initialTheme)
     const [ prevScrollpos, setPrevScrollpos ] = useState(0)
-    const navbarRef = useRef< any | null >(null)
+    const [ navbar, setNavbar ] = useState<HTMLElement | null>(null)
 
     useEffect(() => {
         setPrevScrollpos(window.scrollY)
+        setNavbar(document.getElementById('navbar'))
+
+        const html = document.querySelector('html') 
+        html?.classList.add('snap-mandatory')
+        html?.classList.add('snap-y')
     }, [])
 
     useEffect(() => {
@@ -49,14 +54,15 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
         window.onscroll = function() {
             var currentScrollPos = window.scrollY;
             
-            if (navbarRef === null) { return }
-            
-            if (prevScrollpos > currentScrollPos || window.scrollY === 40) {
-                navbarRef.current.style.top = "0";
-                navbarRef.current.classList.remove('-translate-y-10')
-            } else {
-                navbarRef.current.style.top = "-64px";
-                navbarRef.current.classList.add('-translate-y-10')
+            if (navbar === null) { return }
+            if (navbar.style !== null) {
+                if (prevScrollpos > currentScrollPos || window.scrollY === 40) {
+                    navbar.style.top = "0";
+                    navbar.classList.remove('-translate-y-10')
+                } else {
+                    navbar.style.top = "-64px";
+                    navbar.classList.add('-translate-y-10')
+                }
             }
             setPrevScrollpos(currentScrollPos);
         }
@@ -72,7 +78,7 @@ export default function Navbar({ className } : Readonly<{ className: string }>) 
     }
 
     return (
-        <nav ref={navbarRef} id="navbar" role="navigation" className={`navbar dark:text-light duration-500 z-50 bg-transparent dark:bg-dark std-padding flex justify-between text-dark ${className} `}>
+        <nav id="navbar" role="navigation" className={`navbar dark:text-light duration-500 z-50 bg-transparent dark:bg-dark std-padding flex justify-between text-dark ${className} `}>
 
             {/* brand */}
             <div className="">
