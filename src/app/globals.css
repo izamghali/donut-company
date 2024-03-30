@@ -20,6 +20,10 @@
   .std-heading-h2 {
     @apply font-bold std-duration text-3xl sm:text-5xl lg:text-7xl ;
   }
+
+  .drawer-menu-btn {
+    @apply p-2 cursor-pointer text-left hover:bg-dark hover:text-light rounded-lg;
+  }
 }
 
 @layer base {
